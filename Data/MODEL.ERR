@@ -181,6 +181,9 @@ Error in Automatic Management section. Correct residual veg. stage after mowing.
 FRHARV    9
 Missing AutoMOW section in the species file.
 
+FRSURV    1
+Section SURVIVING WINTER COLD AND DROUGHT not found. Fix the Species file.
+
 FRSHWT    1
 Pod/Fruit harvest age (XMAGE) is not properly defined. Fix the Ecotype file.
 
