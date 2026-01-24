@@ -1003,6 +1003,9 @@ Weather file not found.  Please check file name or create file.
 MAKEFW   19
 Start simulation date is lower than first weather date.
 
+MAKEFW   20
+Error in weather DATE input. Please see WARNING.OUT file.
+
 Y4KDOY    1
 Input date is greather than 99 years after start simulation date.
 
