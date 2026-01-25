@@ -908,9 +908,6 @@ C-----------------------------------------------------------------------
 !      MOBTEM = MAX(0.1,MOBTEM)
 !      MOBSWF = MAX(0.1,MOBSWF)
 
-      WRITE(8500,'(I8,2F6.3,1X,F6.3,1X,F6.3,1X,F6.3)') YRDOY,NMOBSR,
-     & MOBTEM, TGRO(TS), MOBSWF,SWFAC
-
 C-----------------------------------------------------------------------
 C      Set C mobilization rate from storage
 C      Default to CMOBSRN under most conditions
@@ -934,9 +931,6 @@ C-----------------------------------------------------------------------
 !      MOBTEM = MAX(0.1,MOBTEM)
 !      MOBSWF = MAX(0.1,MOBSWF)
 
-
-      WRITE(8560,'(I8,8F6.3)') YRDOY,CMOBSR,CMOBSRN,LAIMOBR,CMOBSRX,
-     & CMOBSRN,PPMFAC,MOBTEM,MOBSWF
 C-----------------------------------------------------------------------
 C      Calculate potential N mobilization for the day
 C-----------------------------------------------------------------------
