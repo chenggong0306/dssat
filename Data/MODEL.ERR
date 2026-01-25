@@ -511,6 +511,9 @@ Automatic harvest date is defined prior to the start of simulation.
 IPSIM    11
 Harvest at maturity option not available for this crop.  Correct input file.
 
+IPSIM    12
+Automatic first planting date is set earlier than the last planting date.
+
 SIMCTR    1
 Error in start simulation date input.  Check format.
 
