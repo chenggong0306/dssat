@@ -26,6 +26,7 @@ C  05/01/2023 GH  Add GY for Guar; SR for Strawberry
 !  06/27/2024 FO  Added Lint Percentage for Evaluate
 !  07/11/2024 FO  Added Economic standard output format
 !  10/11/2024 GH  Add AM for Amaranth
+!  03/12/2026 GH  Update camelina; add onion
 C=======================================================================
 
       SUBROUTINE OPHARV(CONTROL, ISWITCH, 
@@ -231,10 +232,9 @@ C-----------------------------------------------------------------------
       PlantStres % ACTIVE = .FALSE.
       PlantStres % StageName = '.......................'
       SELECT CASE (CROP)
-      CASE ('AM','BC','BG','BN','CH','CI','CN','CO','CP',
-     &      'CU','FB','GB','GY','HM','LT','PE','PN','PP',
-     &      'PR','QU','SB','SF','SR','SU','TM','VB',
-     &      'CM')  !VSH
+      CASE ('AM','BC','BG','BN','CH','CI','CM','CN','CO','CP',
+     &      'CU','FB','GB','GY','HM','LT','ON','PE','PN','PP',
+     &      'PR','QU','SB','SF','SR','SU','TM','VB')
         PlantStres % NSTAGES = 4
         PlantStres % StageName(1)  = 'Emergence -First Flower'
         PlantStres % StageName(2)  = 'First Flower-First Seed'
@@ -277,10 +277,9 @@ C-----------------------------------------------------------------------
 
 !     Set ACTIVE variable to indicate that current phase is active
       SELECT CASE (CROP)
-      CASE ('AM','BC','BG','BN','CH','CI','CN','CO','CP',
-     &      'CU','FB','GB','GY','HM','LT','PE','PN','PP',
-     &      'PR','QU','SB','SF','SR','SU','TM','VB',
-     &      'CM') !VSH
+      CASE ('AM','BC','BG','BN','CH','CM','CI','CN','CO','CP',
+     &      'CU','FB','GB','GY','HM','LT','ON','PE','PN','PP',
+     &      'PR','QU','SB','SF','SR','SU','TM','VB')
         IF (YRDOY > STGDOY(1) .AND. YRDOY <= STGDOY(5)) THEN
           PlantStres % ACTIVE(1) = .TRUE.
         ENDIF
