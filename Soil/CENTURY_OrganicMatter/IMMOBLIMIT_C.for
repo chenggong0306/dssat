@@ -14,6 +14,7 @@
 !  11/14/2003 CHP  Added checks for zero divides
 !  05/18/2004 AJG Completely reshuffled to get it ready for N and P with
 !                 a SOM23 pool for P.
+!  03/15/2026 GH  Fix nmob error for surface layer calculations
 !
 !  Called: CENTURY
 !  Calls : --
@@ -304,19 +305,24 @@
             Net_immob = IMMS1S2(SRFC,N)  - MNRS1S2(SRFC,N)
           ELSEIF (LIM_EL == P) THEN
             Net_immob = IMMS1S23(SRFC,P) - MNRS1S23(SRFC,P)
-          ENDIF
-
+          ENDIF          
+         
           IF (Net_immob > 1.E-6) THEN
 !           Carbon
             CFS1S2(SRFC) = CFS1S2(SRFC) * REDUCFACTMIN(1)
-            CO2FS1(SRFC) = CO2FS1(SRFC) * REDUCFACTMIN(L)
-
-!           Nitrogen.
+            CO2FS1(SRFC) = CO2FS1(SRFC) * REDUCFACTMIN(1)         
+            
+C-GH 03/15/2026       
+C           Replace "L" with 1 using layer 1 for layer 0 = 
+C            surface layer calculations
+C            CO2FS1(SRFC) = CO2FS1(SRFC) * REDUCFACTMIN(L)         
+          
+!           Nitrogen
             EFS1S2(SRFC,N)  = EFS1S2(SRFC,N)  * REDUCFACTMIN(1) 
             IMMS1S2(SRFC,N) = IMMS1S2(SRFC,N) * REDUCFACTMIN(1)
             MNRS1S2(SRFC,N) = MNRS1S2(SRFC,N) * REDUCFACTMIN(1)
 
-!           Phosphorus.
+!           Phosphorus
             IF (N_ELEMS > 1) THEN
               EFS1S23(SRFC,P)  = EFS1S23(SRFC,P)  * REDUCFACTMIN(1) 
               IMMS1S23(SRFC,P) = IMMS1S23(SRFC,P) * REDUCFACTMIN(1)
