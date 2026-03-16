@@ -303,7 +303,7 @@
           CEOR(I)  = -99.
         ENDIF
 
-        IF (I == 0 .OR. NNR(I) == 0) CYCLE
+        IF (I == 0 .OR. NNR(I) <= 0) CYCLE
 
         IF (IDETO_SAVE .EQ. 'Y' .AND. STTOT > 0 .AND.
      &      CONTROL % ErrCode == 0) THEN
