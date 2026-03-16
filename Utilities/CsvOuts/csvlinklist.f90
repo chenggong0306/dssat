@@ -2941,30 +2941,30 @@ End Subroutine LinklstSomN
       
       If(.Not. Associated(headSomC)) Return
       
-      length= Len('RUN,EXP,TR,RN,REP,YEAR,DOY,DAS,'   &
-       //'SCS20D,C%20D,SCS40D,SC%40D'                 &
-       //'SLC20D,L%20D,SLC40D,SL%40D,SOCD'            &
-       //'SC0D,SCTD,SC1D,SC2D,SC3D,SC4D,SC5D'         &
-       //'S1C0D,S1CTD,S1C1D,S1C2D,S1C3D,S1C4D,S1C5D'  &
-       //',S2CTD,S2C1D,S2C2D,S2C3D,S2C4D,S2C5D'       &
-       //',S3CTD,S3C1D,S3C2D,S3C3D,S3C4D,S3C5D'       &
-       //'LC0D,LCTD,LC1D,LC2D,LC3D,LC4D,LC5D'         &
-       //'MEC0D,MECTD,MEC1D,MEC2D,MEC3D,MEC4D,MEC5D'  &
-       //'STC0D,STCTD,STC1D,STC2D,STC3D,STC4D,STC5D'  &
+      length= Len('RUN,EXP,TR,RN,REP,YEAR,DOY,DAS,'    &
+       //'SCS20D,C%20D,SCS40D,SC%40D,'                 &
+       //'SLC20D,L%20D,SLC40D,SL%40D,SOCD,'            &
+       //'SC0D,SCTD,SC1D,SC2D,SC3D,SC4D,SC5D,'         &
+       //'S1C0D,S1CTD,S1C1D,S1C2D,S1C3D,S1C4D,S1C5D,'  &
+       //'S2CTD,S2C1D,S2C2D,S2C3D,S2C4D,S2C5D,'        &
+       //'S3CTD,S3C1D,S3C2D,S3C3D,S3C4D,S3C5D,'        &
+       //'LC0D,LCTD,LC1D,LC2D,LC3D,LC4D,LC5D,'         &
+       //'MEC0D,MECTD,MEC1D,MEC2D,MEC3D,MEC4D,MEC5D,'  &
+       //'STC0D,STCTD,STC1D,STC2D,STC3D,STC4D,STC5D,'  &
        //'RESC,CO20C,CO2SC')                          
 
       Allocate(character(LEN=length) :: Header)
 
-      Header = 'RUN,EXP,TR,RN,REP,YEAR,DOY,DAS,'      &
-       //'SCS20D,C%20D,SCS40D,SC%40D'                 &
-       //'SLC20D,L%20D,SLC40D,SL%40D,SOCD'            &
-       //'SC0D,SCTD,SC1D,SC2D,SC3D,SC4D,SC5D'         &
-       //'S1C0D,S1CTD,S1C1D,S1C2D,S1C3D,S1C4D,S1C5D'  &
-       //',S2CTD,S2C1D,S2C2D,S2C3D,S2C4D,S2C5D'       &
-       //',S3CTD,S3C1D,S3C2D,S3C3D,S3C4D,S3C5D'       &
-       //'LC0D,LCTD,LC1D,LC2D,LC3D,LC4D,LC5D'         &
-       //'MEC0D,MECTD,MEC1D,MEC2D,MEC3D,MEC4D,MEC5D'  &
-       //'STC0D,STCTD,STC1D,STC2D,STC3D,STC4D,STC5D'  &
+      Header = 'RUN,EXP,TR,RN,REP,YEAR,DOY,DAS,'       &
+       //'SCS20D,C%20D,SCS40D,SC%40D,'                 &
+       //'SLC20D,L%20D,SLC40D,SL%40D,SOCD,'            &
+       //'SC0D,SCTD,SC1D,SC2D,SC3D,SC4D,SC5D,'         &
+       //'S1C0D,S1CTD,S1C1D,S1C2D,S1C3D,S1C4D,S1C5D,'  &
+       //'S2CTD,S2C1D,S2C2D,S2C3D,S2C4D,S2C5D,'        &
+       //'S3CTD,S3C1D,S3C2D,S3C3D,S3C4D,S3C5D,'        &
+       //'LC0D,LCTD,LC1D,LC2D,LC3D,LC4D,LC5D,'         &
+       //'MEC0D,MECTD,MEC1D,MEC2D,MEC3D,MEC4D,MEC5D,'  &
+       //'STC0D,STCTD,STC1D,STC2D,STC3D,STC4D,STC5D,'  &
        //'RESC,CO20C,CO2SC'                           
   
       fn = 'somlitc.csv'
