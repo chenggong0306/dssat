@@ -1444,23 +1444,24 @@ end Subroutine CsvOutSumOpsum
 ! Sub for EnvSum.csv
 Subroutine CsvOutEnvSum(                                        &
      RUN, TRTNUM, ROTNO, ROTOPT, REPNO, CROP, MODEL,            &
-     MaxStag, EXNAME,                                           &
+     MaxStag, EXNAME, YRDOY,                                    &
      N2OEM, CO2EM, CH4EM, TCEQM,                                &
      NDCH, CO2A, DAYLA, TMINA, TAVGA, TMAXA, SRADA,             &
-     PRCP, PETP, ETCP, ESCP, EPCP,                              &
+     PRCP, PETP, ETCP, ESCP, EPCP, WSGA, NSTA, PhaseName,       &
      Csvline, pCsvline, lngth) 
       
 !  USE SumModule
 
 !  Input vars
-   Integer, Intent(IN) :: RUN, TRTNUM, ROTNO, ROTOPT, REPNO, MaxStag
+   Integer, Intent(IN) :: RUN, TRTNUM, ROTNO, ROTOPT, REPNO, MaxStag, YRDOY
    Character(Len=2), Intent(IN) :: CROP  
    Character(Len=8), Intent(IN) :: MODEL, EXNAME
+   CHARACTER*23, DIMENSION(0:MaxStag) :: PhaseName
    Integer, Dimension(0:MaxStag), Intent(IN) :: NDCH
    Real, Intent (IN) :: N2OEM, CO2EM, CH4EM, TCEQM
    Real, Dimension(0:MaxStag), Intent(IN) ::          &
      CO2A, DAYLA, TMINA, TAVGA, TMAXA, SRADA,         &
-     PRCP, PETP, ETCP, ESCP, EPCP
+     PRCP, PETP, ETCP, ESCP, EPCP, WSGA, NSTA
    
    Character(:), allocatable, Target, Intent(Out) :: Csvline
    Character(:), Pointer, Intent(Out) :: pCsvline
@@ -1470,10 +1471,12 @@ Subroutine CsvOutEnvSum(                                        &
 !  End of vars
   
    Write(tmp,'(1500(g0,","),g0)')                           &
-   RUN, TRTNUM, ROTNO, ROTOPT, REPNO, CROP, MODEL, EXNAME,  &
+   RUN, TRTNUM, ROTNO, ROTOPT, REPNO, CROP, MODEL, EXNAME, YRDOY,  &
    N2OEM, CO2EM, CH4EM, TCEQM,                              &   
    NDCH(0), DAYLA(0), CO2A(0), TMINA(0), TAVGA(0), TMAXA(0), SRADA(0), PRCP(0), PETP(0), ETCP(0), ESCP(0), EPCP(0),  &
-   (NDCH(i), TMINA(i), TAVGA(i), TMAXA(i), SRADA(i), PRCP(i), PETP(i), ETCP(i), ESCP(i), EPCP(i), i=1,MaxStag)       
+   WSGA(0), NSTA(0),    &
+   (NDCH(i), TMINA(i), TAVGA(i), TMAXA(i), SRADA(i), PRCP(i), PETP(i), ETCP(i), ESCP(i), EPCP(i), WSGA(i), NSTA(i), i=1,MaxStag),   &
+   (PhaseName(i),i=0,MaxStag)
    
    lngth = Len(Trim(Adjustl(tmp)))
    size = lngth
