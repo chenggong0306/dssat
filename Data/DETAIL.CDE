@@ -1,5 +1,5 @@
 *EXPERIMENTAL DETAILS CODES
-! DSSAT v4.8; 2025-05-16
+! DSSAT v4.8; 2026-04-03
 
 ! Headers used in the @ line to identify variables are listed first, codes to
 ! identify methods, chemicals, etc. are listed next in sections that relate to
@@ -253,7 +253,8 @@ CO       Cotton                                                               IB
 CP       Cowpea                                                               IB
 CS       Cassava                                                              IB
 FA       Fallow                                                               IB
-FB       Faba bean                                                            IB
+FB       Faba bean                                                            IB 
+FX       Flax                                                                 IB
 GB       Green bean                                                           IB
 GG       Guinea grass                                                         IB
 GY       Guar                                                                 IB
