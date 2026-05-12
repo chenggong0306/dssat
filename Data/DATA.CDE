@@ -329,7 +329,6 @@ LWD_1  Leaf wt stk 1   Green leaf weight, primary stalk (g[dm]/stk)             
 M_RESP Maint. resp.    Maintenance respiration rate (t/ha/d)                    .
 MLAG1  Leaf area gr    Leaf area growth on main stem                            .
 MLFWT  Total stem lf w Total leaf weight on main stem                           .
-MOWC   Tops left kg/ha Top weight left after mowing (kg/ha)                     .
 MPLA   Total stem lf a Total leaf area on main stem (growth)                    .
 MPLAG  Leaf area gr    Leaf area growth on main stem                            .  
 MSTMWT Total stem w   Total main stem weight                                    .
@@ -373,7 +372,6 @@ RL9D   RLD layer 9     Root density, soil layer 9 (cm/cm3)                      
 RL10   RLD layer 10    Root density, soil layer 10(cm/cm3)                      .
 RSCD   Reserves conc.  Reserves concentration (fr)                              .
 RSFPD  Reserves factor Reserves factor for photosynthesis (0-1)                 .
-RSPLC  Stubble leaf %  Stubble leaf percentage (%)                              .
 RSPD   Rt senesce g/pl Root senescence (g [dm]/pl)                              .
 RSTD   Reproductive st Reproductive development stage (0-9 for cereals)         .
 RWAD   Root wt kg/ha   Root weight (kg [dm]/ha)                                 .
@@ -1550,16 +1548,18 @@ RSPLF  Residual leaf   Residual leaf after mowing (%)                           
 
 *FORAGES
 @CDE   LABEL           DESCRIPTION............................................  SYNONYMS
-FHC%H  Harv. For.%CH2O Harvested forage carbohydrate conc. at harvest (% CH2O)  .
-FHLGH  Harv. For. Lig. Harvested forage lignin conc. at forage harv. (% lignin) .
-FHL%H  Harv. For. %Lf  Harvested forage leaf percentage at forage harv. (% leaf).
-FHN%H  Harv. For. %N   Harvested forage nitrogen conc. at forage harvest (% N)  .
-FHNAH  Harv. For. N    Harvested forage N weight at forage harvest (kg N/ha)    .
-FHNO   Forage harvest  Count of forage harvests within current run              .
+FHC%H  Harv For %CH2O  Harvested forage carbohydrate conc. at harvest (% CH2O)  .
+FHLGH  Harv For %Lig   Harvested forage lignin conc. at forage harv. (% lignin) .
+FHL%H  Harv For %Lf    Harvested forage leaf percentage at forage harv. (% leaf).
+FHN%H  Harv For %N     Harvested forage nitrogen conc. at forage harvest (% N)  .
+FHNAH  Harv For N wt   Harvested forage N weight at forage harvest (kg N/ha)    .
+FHNO   For harvest #   Count of forage harvests within current run (#)          .
 FHWAH  Harv. For. Wt.  Harvested forage wt. (leaf+stem) @ forage harv. (kg/ha)  .
+MOWC   Tops left kg/ha Top weight left after mowing (kg/ha)                     .
 RCWAH  Resid. Can. Wt. Residual canopy weight after forage harvest (kg/ha)      .
 RLAIH  Resid. LAI      Residual leaf area index after forage harvest            .
 RLWAH  Resid. Leaf Wt. Residual leaf weight after forage harvest (kg/ha)        .
+RSPLC  Stubble leaf %  Stubble leaf percentage (%)                              .
 RSWAH  Resid. Stem Wt. Residual stem weight after forage harvest (kg/ha)        .
 RSRWH  Resid. Stor.Wt. Residual storage organ weight after forage harv. (kg/ha) .
 RRTWH  Resid. Root Wt. Residual root weight after forage harvest (kg/ha)        .
