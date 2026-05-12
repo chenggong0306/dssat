@@ -1,5 +1,5 @@
 *Codes for Field and Simulated Data
-! DSSAT v4.8; 2025-05-16
+! DSSAT v4.8; 2026-05-12
 
 ! Codes currently used for both simulated and field data are listed in sections
 ! relating to specific model output files. Codes currently only used for field
@@ -329,6 +329,7 @@ LWD_1  Leaf wt stk 1   Green leaf weight, primary stalk (g[dm]/stk)             
 M_RESP Maint. resp.    Maintenance respiration rate (t/ha/d)                    .
 MLAG1  Leaf area gr    Leaf area growth on main stem                            .
 MLFWT  Total stem lf w Total leaf weight on main stem                           .
+MOWC   Tops left kg/ha Top weight left after mowing (kg/ha)                     .
 MPLA   Total stem lf a Total leaf area on main stem (growth)                    .
 MPLAG  Leaf area gr    Leaf area growth on main stem                            .  
 MSTMWT Total stem w   Total main stem weight                                    .
@@ -372,6 +373,7 @@ RL9D   RLD layer 9     Root density, soil layer 9 (cm/cm3)                      
 RL10   RLD layer 10    Root density, soil layer 10(cm/cm3)                      .
 RSCD   Reserves conc.  Reserves concentration (fr)                              .
 RSFPD  Reserves factor Reserves factor for photosynthesis (0-1)                 .
+RSPLC  Stubble leaf %  Stubble leaf percentage (%)                              .
 RSPD   Rt senesce g/pl Root senescence (g [dm]/pl)                              .
 RSTD   Reproductive st Reproductive development stage (0-9 for cereals)         .
 RWAD   Root wt kg/ha   Root weight (kg [dm]/ha)                                 .
