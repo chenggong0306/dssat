@@ -1,0 +1,21 @@
+services:
+  dssat-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dssat-api:latest
+    container_name: dssat-api
+    ports:
+      - "8765:8765"
+    environment:
+      DSSAT_ROOT: /opt/dssat
+      DSSAT_EXE: /opt/dssat/dscsm048
+      DSSAT_RUNS: /app/runs
+      HOST: 0.0.0.0
+      PORT: 8765
+    volumes:
+      - dssat-runs:/app/runs
+    restart: unless-stopped
+
+volumes:
+  dssat-runs:

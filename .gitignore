@@ -67,3 +67,14 @@ Plant/ORYZA
 .vs/*
 .history/*
 Resources/R*
+
+# Local DSSAT API runtime/build artifacts
+build-msys/
+runs/
+HLJBatch.v48
+TESTBatch.v48
+test_mzx.MZX
+tmp_*.py
+tmp_*.txt
+__pycache__/
+services/__pycache__/
